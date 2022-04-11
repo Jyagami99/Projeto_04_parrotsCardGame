@@ -52,28 +52,50 @@ body{
     backface-visibility: hidden;
     transition: all .5s;
     transform-style: preserve-3d;
-  }
-
-  .frente {
-    transform: rotateY(180deg);
-  }
-
-  .carta:hover .frente {
-    transform: rotateY(0deg);
-  }
-
-  .carta:hover .verso {
-    transform: rotateY(-180deg);
-  }
-
-.verso img {
-    width: 100px;
-    height: 100px;
 }
 
-.frente img {
+.back-face {
+    transform: rotateY(180deg);
+}
+
+.selecionado-frente{
+    transform: rotateY(180deg);
+}
+
+.selecionado-verso {
+    transform: rotateY(0deg);
+}
+
+.match-frente {
+    transform: rotateY(-180deg);
+}
+
+.match-verso {
+    transform: rotateY(0deg);
+}
+
+
+.face img {
     width: 100px;
     height: 100px;
+    -webkit-filter: drop-shadow(3px 3px 3px #686868);
+    filter: drop-shadow(3px 3px 3px #686868);
+}
+
+/* CRONOMETRO */
+.timer {
+    width: 80px;
+    height: 40px;
+    background-color: #A7E9AF;
+    border: 2px ridge #99cea8;
+    border-radius: 5px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 56px;
+    left: 80%;
+    position: relative;
 }
 
  /* RESPONSIVIDADE */
