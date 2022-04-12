@@ -2,6 +2,7 @@
 
 body{
     background-color: #E5E5E5;
+    font-family: 'Roboto', sans-serif;
 }
  /* TOPO */
 .topo{
@@ -14,7 +15,6 @@ body{
 }
 
 .topo h1{
-    font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 56px;
     line-height: 66px;
@@ -31,8 +31,8 @@ body{
 }
  /* CARTA */
 .carta{
-    width: 118px;
-    height: 146px;
+    width: 200px;
+    height: 250px;
     position: relative;
     margin: 24px;
 }
@@ -48,6 +48,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+
     position: absolute;
     backface-visibility: hidden;
     transition: all .5s;
@@ -56,24 +57,15 @@ body{
 
 .back-face {
     transform: rotateY(180deg);
-}
-
-.selecionado-frente{
-    transform: rotateY(180deg);
-}
-
-.selecionado-verso {
+  }
+  
+  .virada .back-face {
     transform: rotateY(0deg);
-}
-
-.match-frente {
+  }
+  
+  .virada .front-face {
     transform: rotateY(-180deg);
-}
-
-.match-verso {
-    transform: rotateY(0deg);
-}
-
+  }  
 
 .face img {
     width: 100px;
