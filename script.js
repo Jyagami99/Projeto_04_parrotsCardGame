@@ -17,9 +17,19 @@ let cartasCertas = 0;
 let timer = 0;
 let idTimer;
 
+function jogoInvalido () {
+	if (qtdCartas < 4 || qtdCartas > 14 || (qtdCartas % 2) === 1 || isNaN(qtdCartas)) {
+		return true;
+	}
+	return false;
+}
+
+while (jogoInvalido()) {
+  qtdCartas = Number(prompt("Com quantas cartas voce quer jogar"));
+}
+
 function perguntarQuantidade() {
   qtdCartas = parseInt(prompt("Com quantas cartas você quer jogar?"));
-  //qtdCartas = 4;
   while (
     isNaN(qtdCartas) ||
     qtdCartas < 4 ||
